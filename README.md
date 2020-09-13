@@ -56,3 +56,12 @@ Unconstrained Multi-View Videos"
 - David Guera et al., "We Need No Pixels: Video Manipulation Detection Using Stream Descriptors"
     - https://arxiv.org/pdf/1906.08743v1.pdf
     - https://github.com/dguera/fake-video-detection-without-pixels
+
+<hr>
+<br>
+
+##### Other:
+```
+# To copy file to remote machine
+scp <FILE> -P <PORT> <USER_NAME>@<IP>:~/<FILE>
+```
