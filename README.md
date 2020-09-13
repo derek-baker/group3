@@ -1,7 +1,7 @@
 # G3 
 Tool intended to generate novel video (sequences of frames) containing human faces displaying microexpressions from existing video of the same. The novel video will be generated via:  
 
-> "a data-driven approach for unsupervised videoretargeting that translates content from one domain to another while preserving the style native to a domain, i.e., if contents of John Oliver’sspeech were to be transferred to Stephen Colbert, then the generated con-tent/speech should be in Stephen Colbert’s style." [1]
+> "a data-driven approach for unsupervised videoretargeting that translates content from one domain to another while preserving the style native to a domain, i.e., if contents of John Oliver’s speech were to be transferred to Stephen Colbert, then the generated con-tent/speech should be in Stephen Colbert’s style." [0]
 
 <hr>
 <br>
@@ -28,11 +28,20 @@ print(evaluation)
 <hr>
 <br>
 
+## Domain Specs
+- Each domain contain somewhere between 7,500 and 10,000 image files.
+- Each image should contain three contiguous video. frames
+    - > "Each image file consists of horizontally concatenated images, "{t, t+1, t+2}" frames from the video."[0]
+    ![Three frames of S. Colbert](./recycle_gan/domain_example_image.png "EXAMPLE")
+
+<hr>
+<br>
+
 ### References:
-[1] Aayush Bansal. “Recycle-GAN: Unsupervised Video Retargeting.” Carnegie-Mellon University.
+[0] Aayush Bansal. “Recycle-GAN: Unsupervised Video Retargeting.” Carnegie-Mellon University.
 http://www.cs.cmu.edu/~aayushb/Recycle-GAN/ (accessed September 8, 2020).
 
-[2] Cornell University. “Spotting Macro- and Micro-expression Intervals in Long Video Sequences
+[1] Cornell University. “Spotting Macro- and Micro-expression Intervals in Long Video Sequences
 .” arXiv. https://arxiv.org/abs/1912.11985 (accessed September 8, 2020).
 
 <hr>

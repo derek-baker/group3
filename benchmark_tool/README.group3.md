@@ -1,3 +1,6 @@
+### Attempting to use Octave instead of MatLab
+- https://www.gnu.org/software/octave/
+
 ### Had to run the command below to eliminate an error
 
 ``` bash

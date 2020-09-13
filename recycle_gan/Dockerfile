@@ -1,0 +1,3 @@
+FROM pytorch/pytorch
+
+RUN pip install numpy==1.15.0 torch==0.4.1.post2 torchvision==0.2.2 visdom dominate
