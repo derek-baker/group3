@@ -6,7 +6,7 @@ Tool intended to generate novel video (sequences of frames) containing human fac
 <hr>
 <br>
 
-## Algorithm
+## High-Level Algorithm:
 ``` python
 def run_unsupervised_video_retargeting(domain_a, domain_b):    
     domains_valid = validate_domains([domain_a, domain_b])
@@ -28,8 +28,9 @@ print(evaluation)
 <hr>
 <br>
 
-## Domain Specs
+## Domain Specs:
 - Each domain contain somewhere between 7,500 and 10,000 image files.
+    - > "For smaller datasets (ones having 1000 images or less), it is suitable to let it train for longer"[0] than 20-40 epochs.
 - Each image should contain three contiguous video. frames
     - > "Each image file consists of horizontally concatenated images, "{t, t+1, t+2}" frames from the video."[0]
     ![Three frames of S. Colbert](./recycle_gan/domain_example_image.png "EXAMPLE")
