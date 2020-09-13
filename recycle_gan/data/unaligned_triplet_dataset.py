@@ -38,6 +38,8 @@ class UnalignedTripletDataset(BaseDataset):
         # print('(A, B) = (%d, %d)' % (index_A, index_B))
 
         # read the triplet from A and B --
+        print('OPENING IMAGE: ' + A_path)
+        print('OPENING IMAGE: ' + B_path)
         A_img = Image.open(A_path).convert('RGB')
         B_img = Image.open(B_path).convert('RGB')
 

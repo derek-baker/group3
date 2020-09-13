@@ -15,10 +15,12 @@ For each task, add data to the './datasets' directory. The images from two domai
 ## Training
 IMPORTANT: The training script requires that ```visdom``` is running on port 8097(or whatever you've configured).
 <br>
-To run visdom:
+To start visdom:
 ``` bash
 # After installing requirements.txt 
 visdom
+# The visdom command is equivalent to running python -m visdom.server.
+# https://pypi.org/project/visdom/#setup
 ```
 
 [scripts/run_Recycle_gan.sh](scripts/run_Recycle_gan.sh) contains an example of how to use the training script ```train.py```. For more info on that script's potential arguments, see [options/train_options.py](options/train_options.py)
@@ -60,4 +62,8 @@ tkill() {
 
 # Attaching Sessions
 # tmux attach-session -t geek-1
+
+# To jump to scroll mode in an attached tmux session
+# Ctrl+b, [
+# (press q to quit scroll mode)
 ```
