@@ -15,3 +15,11 @@ docker run --rm -v $(pwd):/src benchmark:1.0 bash  # /source/myfile.m
 
 ### Dataset location
 ```/media/Data/CASME_S2```
+
+<!-- 
+TODO
+- Feed CASME^2 to benchmark
+- Fix RGAN
+- Pull data from CASME^2 and feed to RGAN
+- 
+ -->
