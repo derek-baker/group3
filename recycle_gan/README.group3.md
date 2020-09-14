@@ -7,7 +7,7 @@
 <br>
 
 ## Data pre-processing 
-For each task, add data to the './datasets' directory. The images from two domains are placed inside  folders 'trainA/' and 'trainB/' (which you'll create). Each image file consists of horizontally concatenated images, '{t, t+1, t+2}' frames from the video. The test images are placed in 'testA/' and 'testB/'. Since we do not use temporal information at test time, the test data consists of single image '{t}'.
+For each task, add data to the './datasets' directory. The images from two domains are placed inside  folders 'trainA/' and 'trainB/' (which you'll create). Each image file (if using unaligned triplets) consists of horizontally concatenated images, '{t, t+1, t+2}' frames from the video. The test images are placed in 'testA/' and 'testB/'. Since we do not use temporal information at test time, the test data consists of single image '{t}'. (See [options/train_options.py](options/train_options.py) for info on other input formats)
 
 <hr>
 <br>
@@ -15,12 +15,10 @@ For each task, add data to the './datasets' directory. The images from two domai
 ## Training
 NOTE: The training script expects that ```visdom```(or some other viz tool) is running on port 8097(or whatever you've configured). If there's nothing listening on the configured port, you'll see non-fatal errors written to stderr.
 <br><br>
-To start visdom:
-``` bash
-# After installing requirements.txt 
+To start visdom (After installing requirements.txt):
+``` bash 
 visdom
-# The visdom command is equivalent to running python -m visdom.server
-# https://pypi.org/project/visdom/#setup
+# The visdom command is equivalent to running python -m visdom.server (https://pypi.org/project/visdom/#setup)
 ```
 To train:
 <br>
