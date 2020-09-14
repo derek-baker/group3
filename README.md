@@ -60,8 +60,3 @@ Unconstrained Multi-View Videos"
 <hr>
 <br>
 
-##### Other:
-```
-# To copy file to remote machine
-scp <FILE> -P <PORT> <USER_NAME>@<IP>:~/<FILE>
-```

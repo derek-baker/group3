@@ -31,22 +31,9 @@ visdom
 ### Other 
 ``` bash
 # Install dependencies only for current user
-pip3 install -r requirements.txt --user
+# pip3 install -r requirements.txt --user
 
 # You can use tmux so that your session will live even if disconnected (but not if you log out)
-alias tlist="tmux ls"
-alias tlast="tmux a"
-tnew() {
-    tmux new -s $1
-}
-
-tlink() {
-    tmux a -t $1
-}
-tkill() {
-    tmux kill-session -t $1
-}
-
 # To create a new window in the current session, press Ctrl+B, and then C. 
 
 # To hop between windows, press Ctrl+B, and then one of the followings keys:
@@ -66,4 +53,7 @@ tkill() {
 # To jump to scroll mode in an attached tmux session
 # Ctrl+b, [
 # (press q to quit scroll mode)
+
+# To copy file to remote machine
+# scp <FILE> -P <PORT> <USER_NAME>@<IP>:~/<FILE>
 ```
