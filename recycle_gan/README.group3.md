@@ -13,16 +13,17 @@ For each task, add data to the './datasets' directory. The images from two domai
 <br>
 
 ## Training
-IMPORTANT: The training script requires that ```visdom``` is running on port 8097(or whatever you've configured).
-<br>
+NOTE: The training script expects that ```visdom```(or some other viz tool) is running on port 8097(or whatever you've configured). If there's nothing listening on the configured port, you'll see non-fatal errors written to stderr.
+<br><br>
 To start visdom:
 ``` bash
 # After installing requirements.txt 
 visdom
-# The visdom command is equivalent to running python -m visdom.server.
+# The visdom command is equivalent to running python -m visdom.server
 # https://pypi.org/project/visdom/#setup
 ```
-
+To train:
+<br>
 [scripts/run_Recycle_gan.sh](scripts/run_Recycle_gan.sh) contains an example of how to use the training script ```train.py```. For more info on that script's potential arguments, see [options/train_options.py](options/train_options.py)
 
 <hr>
