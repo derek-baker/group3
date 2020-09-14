@@ -12,3 +12,6 @@ sudo apt remove golang-docker-credential-helpers
 ``` bash
 docker run --rm -v $(pwd):/src benchmark:1.0 bash  # /source/myfile.m
 ```
+
+### Dataset location
+```/media/Data/CASME_S2```
