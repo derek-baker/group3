@@ -37,18 +37,18 @@ class UnalignedTripletDataset(BaseDataset):
           B_path = self.B_paths[index_B]
           # print('(A, B) = (%d, %d)' % (index_A, index_B))
 
-          # A_img = None
-          # B_img = None
-          # try:
-          #      # read the triplet from A and B --
-          #      print('OPENING IMAGE: ' + A_path)
-          #      print('OPENING IMAGE: ' + B_path)
-          #      A_img = Image.open(A_path).convert('RGB')
-          #      B_img = Image.open(B_path).convert('RGB')
-          # except Exception as e:
-          #      print('ERROR:')
-          #      print(str(e))
-          #      return None
+          A_img = None
+          B_img = None
+          try:
+               # read the triplet from A and B --
+               print('OPENING IMAGE: ' + A_path)
+               print('OPENING IMAGE: ' + B_path)
+               A_img = Image.open(A_path).convert('RGB')
+               B_img = Image.open(B_path).convert('RGB')
+          except Exception as e:
+               print('ERROR:')
+               print(str(e))
+               return None
 
           # A = self.transform(A_img)
           # B = self.transform(B_img)
