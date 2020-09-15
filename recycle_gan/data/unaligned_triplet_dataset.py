@@ -5,6 +5,8 @@ from data.image_folder import make_dataset
 from PIL import Image
 import PIL
 import random
+from PIL import ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 
 class UnalignedTripletDataset(BaseDataset):
@@ -37,24 +39,33 @@ class UnalignedTripletDataset(BaseDataset):
           B_path = self.B_paths[index_B]
           # print('(A, B) = (%d, %d)' % (index_A, index_B))
 
-          A_img = None
-          B_img = None
-          try:
-               # read the triplet from A and B --
-               print('OPENING IMAGE: ' + A_path)
-               print('OPENING IMAGE: ' + B_path)
-               A_img = Image.open(A_path).convert('RGB')
-               B_img = Image.open(B_path).convert('RGB')
-          except Exception as e:
-               print('ERROR:')
-               print(str(e))
-               return None
+          # A_img = None
+          # B_img = None
+          # failed = False
+          # try:
+
+          # read the triplet from A and B --
+          print('OPENING IMAGE: ' + A_path)
+          print('OPENING IMAGE: ' + B_path)
+          A_img = Image.open(A_path).convert('RGB')
+          B_img = Image.open(B_path).convert('RGB')
 
           # A = self.transform(A_img)
           # B = self.transform(B_img)
           # get the triplet from A
           A_img = A_img.resize((self.opt.loadSize * 3, self.opt.loadSize), Image.BICUBIC)
           A_img = self.transform(A_img)
+
+          ## -- get the triplet from B
+          B_img = B_img.resize((self.opt.loadSize * 3, self.opt.loadSize), Image.BICUBIC)
+          B_img = self.transform(B_img)
+
+          # except Exception as e:
+          #      print('ERROR:')
+          #      print(str(e))
+          #      failed = True
+          # if failed == True:
+          #      return None
 
           w_total = A_img.size(2)
           w = int(w_total / 3)
@@ -70,10 +81,6 @@ class UnalignedTripletDataset(BaseDataset):
 
           A2 = A_img[:, h_offset:h_offset + self.opt.fineSize,
                2 * w + w_offset:2 * w + w_offset + self.opt.fineSize]
-
-          ## -- get the triplet from B
-          B_img = B_img.resize((self.opt.loadSize * 3, self.opt.loadSize), Image.BICUBIC)
-          B_img = self.transform(B_img)
 
           w_total = B_img.size(2)
           w = int(w_total / 3)

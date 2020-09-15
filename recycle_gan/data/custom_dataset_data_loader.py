@@ -41,4 +41,6 @@ class CustomDatasetDataLoader(BaseDataLoader):
         for i, data in enumerate(self.dataloader):
             if i >= self.opt.max_dataset_size:
                 break
+            # if data is None:
+            #     continue
             yield data

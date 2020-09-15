@@ -22,8 +22,8 @@ for epoch in range(opt.epoch_count, opt.niter + opt.niter_decay + 1):
     # I think UnalignedTripletDataset.__getitem__() is called by enumerate(dataset)
     for i, data in enumerate(dataset):
         # Attempt to handle bad images
-        if data is None:
-            continue
+        # if data is None:
+        #     continue
 
         iter_start_time = time.time()
         visualizer.reset()
