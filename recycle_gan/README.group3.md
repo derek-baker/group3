@@ -1,7 +1,7 @@
 ## SYSTEM REQS:
 - 32GB RAM (Probably more) and a GPU. 
     - Attempting to train a model on a CPU such as an Intel i7 with only 16GB RAM will absolutely crush your machine and OOM-Reaper will kill the training process.
-- See the [project readme]('./README.md') for more details.
+- See the [project readme](README.md) for more details.
 
 <hr>
 <br>
@@ -42,7 +42,7 @@ The training will save a model every 10 epochs(based on settings in aforemention
 
 <br>
 
-You can see the loss over time by checking the `visdom` server. The [project readme]('./README.md') mentions some hints in terms of number of epochs required for a given amount of data.
+You can see the loss over time by checking the `visdom` server. The [project readme](README.md) mentions some hints in terms of number of epochs required for a given amount of data.
 
 <hr>
 <br>
