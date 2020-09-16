@@ -1,7 +1,6 @@
 ## System requirements 
 - 32GB RAM (Probably more).
-- An NVIDIA GPU and some CUDA stuff I think.
-- Probably Linux.
+- See the [project readme]('./README.md') for more details
 
 <hr>
 <br>
@@ -20,9 +19,18 @@ To start visdom (After installing requirements.txt):
 visdom
 # The visdom command is equivalent to running python -m visdom.server (https://pypi.org/project/visdom/#setup)
 ```
+
+<br>
+
+OTHER NOTE: To deal with truncated images, the following lines were added to `data/unaligned_triplet_dataset.py`:
+``` python
+from PIL import ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
+```
+
 To train:
 <br>
-[scripts/run_Recycle_gan.sh](scripts/run_Recycle_gan.sh) contains an example of how to use the training script ```train.py```. For more info on that script's potential arguments, see [options/train_options.py](options/train_options.py)
+[scripts/run_Recycle_gan.sh](scripts/run_Recycle_gan.sh) contains an example of how to use the training script ```train.py```. For more info on that script's potential arguments, see [options/train_options.py](options/train_options.py). The training will save a model every 10 epochs(based on settings in aforementioned .sh script). You'll need to stop training manually. You can see the loss over time by checking the `visdom` server. The [project readme]('./README.md') mentions some hints in terms of number of epochs required for a given amount of data.
 
 <hr>
 <br>

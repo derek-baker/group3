@@ -9,12 +9,16 @@ This repository provides the code for our work on [unsupervised video retargetin
                Deva Ramanan and
                Yaser Sheikh},
   title     = {Recycle-GAN: Unsupervised Video Retargeting},
-  booktitle   = {ECCV},
+  booktitle = {ECCV},
   year      = {2018},
 }
 ```
 
 Acknowledgements: This code borrows heavily from the PyTorch implementation of [Cycle-GAN and Pix2Pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix). A  huge thanks to them!
+
+<br>
+
+Original Repo: https://github.com/aayushbansal/Recycle-GAN
 
 
 ### John Oliver to Stephen Colbert
