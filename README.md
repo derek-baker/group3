@@ -40,10 +40,10 @@ print(evaluation)
 <br>
 
 ## More info:
-- [Recycle-GAN]('recycle_gan/README.md')
-- [Notes about Recycle-GAN]('recycle_gan/README.group3.md')
-- [Benchmark]('benchmark_tool/README.md')
-- [Notes about Benchmark]('benchmark_tool/README.group3.md')
+- [Recycle-GAN](recycle_gan/README.md)
+- [Notes about Recycle-GAN](recycle_gan/README.group3.md)
+- [Benchmark](benchmark_tool/README.md)
+- [Notes about Benchmark](benchmark_tool/README.group3.md)
 
 <hr>
 <br>
