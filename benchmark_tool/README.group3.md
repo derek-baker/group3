@@ -1,7 +1,7 @@
 ### Attempting to use Octave instead of MatLab
 - https://www.gnu.org/software/octave/
 
-### Had to run the command below to eliminate an error
+<!-- ### Had to run the command below to eliminate an error -->
 
 <!-- ``` bash
 # https://github.com/moby/moby/issues/37916
