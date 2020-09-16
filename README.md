@@ -34,6 +34,16 @@ print(evaluation)
 - Each image should contain three contiguous video. frames
     - > "Each image file consists of horizontally concatenated images, "{t, t+1, t+2}" frames from the video."[0]
     ![Three frames of S. Colbert](./recycle_gan/domain_example_image.png "EXAMPLE")
+    <small>Image attribution: Better to ask forgiveness than permission (usually)</small>
+
+<hr>
+<br>
+
+## More info:
+- [Recycle-GAN]('./recycle_gan/README.md')
+- [Notes about Recycle-GAN]('./recycle_gan/README.group3.md')
+- [Benchmark]('./benchmark_tool/README.md')
+- [Notes about Benchmark]('./benchmark_tool/README.group3.md')
 
 <hr>
 <br>
