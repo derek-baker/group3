@@ -6,7 +6,7 @@ Tool intended to generate novel video (sequences of frames) containing human fac
 <hr>
 <br>
 
-## High-Level Algorithm:
+## High-Level Algorithm (pseudocode):
 ``` python
 def run_unsupervised_video_retargeting(domain_a, domain_b):    
     domains_valid = validate_domains([domain_a, domain_b])
