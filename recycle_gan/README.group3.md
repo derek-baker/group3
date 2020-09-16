@@ -30,7 +30,22 @@ ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 To train:
 <br>
-[scripts/run_Recycle_gan.sh](scripts/run_Recycle_gan.sh) contains an example of how to use the training script ```train.py```. For more info on that script's potential arguments, see [options/train_options.py](options/train_options.py). The training will save a model every 10 epochs(based on settings in aforementioned .sh script). You'll need to stop training manually. You can see the loss over time by checking the `visdom` server. The [project readme]('./README.md') mentions some hints in terms of number of epochs required for a given amount of data.
+[scripts/run_Recycle_gan.sh](scripts/run_Recycle_gan.sh) contains an example of how to use the training script ```train.py```. For more info on that script's potential arguments, see [options/train_options.py](options/train_options.py). 
+
+<br>
+
+The training will save a model every 10 epochs(based on settings in aforementioned .sh script). You'll need to stop training manually. The models will be saved to ```.pth``` files in ```./checkpoints/<EXPERIMENT_NAME>```
+
+<br>
+
+You can see the loss over time by checking the `visdom` server. The [project readme]('./README.md') mentions some hints in terms of number of epochs required for a given amount of data.
+
+<hr>
+<br>
+
+## Training
+
+TODO
 
 <hr>
 <br>
